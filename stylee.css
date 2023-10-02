@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');/*To use the Poppins font in your web page*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+
+    background: url('background.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.form-box{
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background-color:transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);/*backdrop-filter: blur() property is used*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+h2{
+    font-size: 2em;
+    color: white;
+    text-align: center;
+}
+.inputbox{
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #fff;/*border-bottom -three properties: border-bottom-width,border-bottom-style,border-bottom-color*/
+}
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);/* moves an element vertically by 50% of its own height*/
+    color: #fff;
+    font-size: 1em;
+    pointer-events: none;/*prevents an element from being the target of pointer events. This means that the element cannot be clicked, hovered over, or otherwise interacted with.*/
+    transition: .5s;
+}
+input:focus ~ label,/*input:focus ~ label selects the label element that is the next sibling of an input element that is currently in focus*/
+input:valid ~ label{
+    top: -5px;/* This means that when an input element has a valid value, the label element that is directly after it will be selected by this selector.*/
+}
+.inputbox input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding:0 35px 0 5px;
+    color: #fff;
+}
+.inputbox ion-icon{
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    top: 20px;
+}
+.forget{
+    margin: -15px 0 15px;
+    font-size: .9em;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+.forget label input{   /*Adding a small amount of space between the input element and the label element, to make it easier for users to see where the input element begins and ends.
+                      Creating a more visually appealing effect when the label element and the input element are next to each other.
+                        Making it easier for users to click on the input element, by preventing the label element from overlapping it.*/
+ margin-right: 3px;
+}
+
+.forget label a{
+    color:#fff;
+    text-decoration: none;
+}
+.forget label a:hover{
+    text-decoration: underline;
+}
+button{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: #fff;
+    border:none;
+    outline: none;
+    cursor: pointer;/*property on a button or a link. When the user hovers over the button or link, the cursor will change to a pointing hand,*/
+    font-size: 1em;
+    font-weight: 600;  
+}
+.register{
+    font-size: .9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+.register p a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+.register p a:hover{
+    text-decoration: underline;
+}
